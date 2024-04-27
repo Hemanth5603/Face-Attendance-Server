@@ -4,4 +4,4 @@ face_recognition
 flask
 opencv-python
 numpy
-sqlite3
+pysqlite3

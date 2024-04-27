@@ -1,7 +1,6 @@
 
 import sqlite3
 from flask import *
-from flask_mail import *
 from VideoPreoprocess import VideoPreprocessor
 from Face_recog_methods_2 import FaceRecognition
 app = Flask(__name__)
