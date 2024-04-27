@@ -1,7 +1,8 @@
-from flask import Flask, request, render_template
-
+from flask import *
+from video_preprocess import video_preprocessing
 app = Flask(__name__)
-
+'''
+SHOULD IMPLEMENT FOR FRAMES STILL '''
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -18,13 +19,12 @@ def upload():
     video = request.files['video']
     if video.filename == "":
         return "NO video file selected"
-    
     if video and allowed_file(video.filename):
         video.save('static/videos/' + video.filename)
-        return render_template('preview.html', video_name = video.filename )
-    
+        if video_preprocessing.empty_folder():
+            return redirect(url_for("extract"))
+        else:
+            return "<h1> Error in the Folder"
     return "inavalid file type"
-
-
 if __name__ == "__main__":
     app.run(debug=True)

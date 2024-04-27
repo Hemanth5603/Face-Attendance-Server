@@ -1,0 +1,17 @@
+<html>
+    <head> 
+        <title> MyWeb site </title> 
+    </head> 
+    <body>
+        <form action = "{{url_for('login')}}" method="post">
+            <label> USER_NAME  </label>
+            <input type = "text"  name ="Uname">
+            <br>
+            <label> PASSWORD   </label>
+            <input type = "password" name = "Passwd">
+            <br>
+            <input type = "submit" value = "Login">
+            <input type = "submit" value = "SignUp" formaction = "{{url_for('signUp')}}">
+        </form>
+    </body>
+</html>

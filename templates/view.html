@@ -1,0 +1,25 @@
+<html>
+    <head> 
+        <title> MySignUpBlog </title>
+    </head>
+    <body>
+        <form action = "{{url_for('signupDetails')}}" method="post">
+            <label> USER_NAME   </label> 
+            <input type = "text" name = "user_name">
+            <br>
+            <label> PASSWORD   </label>
+            <input type = "password" name = "pass">
+            <br>
+            <label> FIRST_NAME   </label>
+            <input type = "text" name = "first_name">
+            <br> 
+            <label> LAST_NAME   </label>
+            <input type = "text" name = "last_name">
+            <br> 
+            <label> EMAIL </label> 
+            <input type = "email" name = "email">
+            <br> 
+            <input type = "submit" value = "ok">
+        </form>
+    </body>
+</html>
