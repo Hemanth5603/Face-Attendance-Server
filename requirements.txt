@@ -1,0 +1,7 @@
+dlib
+cmake
+face_recognition
+flask
+opencv-python
+numpy
+sqlite3
